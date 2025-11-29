@@ -56,8 +56,23 @@ The function will be given a class_size by number of students, odds, and Number_
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
 
+```{r}
+ birthday_odds <- function(n){
+  prob_no_match <- prod(365:(365-n+1))/365^n 
+  prob_match <- 1 - prob_no_match
+  prob_no_match/prob_match }
+```
 
 
+```{r}
+for(n in 2:60)
+{if(birthday_odds(n) < 1/2){
+    print(n)
+  break
+}
+  }
+```
+```
 
 
 
