@@ -37,14 +37,16 @@ There are 3 questions and there should be at least 3 separate commits, at least 
 3. How much money would Brownlow be expected to end up with if the bets went as described.
 
 ```{r}
-BrLwarray<-numeric(1000)
-for(i in 1:1000)(
-  BrLwarray[i]<-BrLw()
-)
-SBrlwarray <- sort(BrLwarray)
+BrLw()
 ```
 
 ```{r}
+BrLwarray<-numeric(1000)
+for(i in 1:1000){
+  BrLwarray[i]<-BrLw()
+}
+SBrLwarray <- sort(BrLwarray)
+
 print(SBrLwarray[25])
 print(SBrLwarray[975])
 ```
